@@ -3,11 +3,11 @@
  * @params {String} css style
  */
 
-function insertStyle ( css ) {
-    if(!css) return ;
+function insertStyle(css) {
+    if (!css) return;
 
-    if(typeof(window) == 'undefined') return ;
-    let style = document.createElement('style');
+    if (typeof (window) == 'undefined') return;
+    const style = document.createElement('style');
     style.setAttribute('media', 'screen');
 
     style.innerHTML = css;

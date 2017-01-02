@@ -1,14 +1,11 @@
-import babel from 'rollup-plugin-babel';
+import asyncGen from 'rollup-plugin-async';
 var pkg = require('./package.json')
 var external = Object.keys( pkg.dependencies );
 
 export default {
     entry: 'src/index.js',
     plugins: [
-        babel({
-            exclude: 'node_modules/**',
-            runtimeHelpers: true
-        })
+        asyncGen()
     ],
     targets: [
         {
